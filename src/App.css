@@ -1,0 +1,207 @@
+/* Reset básico e base tipográfica */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f5f6f8;
+  color: #1f2933;
+  line-height: 1.5;
+}
+
+/* Largura fluida: nunca passa de 1100px e nunca encosta na borda do celular */
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+  padding: 24px 0 48px;
+  display: grid;
+  gap: 20px;
+}
+
+/* Cabeçalho */
+.header {
+  background: #2f6f4e;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+.header-codigo {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Botões das abas */
+.abas {
+  display: flex;
+  gap: 8px;
+}
+
+.aba {
+  background: #fff;
+  color: #52606d;
+  border: 1px solid #cbd2d9;
+}
+
+.aba:hover {
+  background: #f0f2f4;
+}
+
+.aba.ativa {
+  background: #2f6f4e;
+  color: #fff;
+  border-color: #2f6f4e;
+}
+
+/* Blocos brancos das seções */
+.card {
+  background: #fff;
+  border: 1px solid #e2e6ea;
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+}
+
+.card h2 {
+  font-size: 1.15rem;
+}
+
+.card h3 {
+  font-size: 0.95rem;
+  color: #52606d;
+}
+
+/* Campos de formulário lado a lado no desktop */
+.campos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  font: inherit;
+}
+
+button {
+  background: #2f6f4e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #275f42;
+}
+
+button.secundario {
+  background: #7b8794;
+}
+
+.acoes {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Indicadores */
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.indicador {
+  background: #fff;
+  border: 1px solid #e2e6ea;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.indicador span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2f6f4e;
+}
+
+.indicador p {
+  font-size: 0.85rem;
+  color: #52606d;
+}
+
+/* Grade de cards de animais e solicitações */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.animal {
+  border: 1px solid #e2e6ea;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.animal p {
+  font-size: 0.9rem;
+  color: #52606d;
+  margin: 4px 0 8px;
+}
+
+/* Etiquetas coloridas de status */
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #e2e6ea;
+}
+
+.tag-disponivel,
+.tag-aprovada {
+  background: #d7f0e1;
+  color: #22603f;
+}
+
+.tag-em_adocao,
+.tag-pendente {
+  background: #fdf0cd;
+  color: #7a5c04;
+}
+
+.tag-adotado,
+.tag-cancelada {
+  background: #e4e7eb;
+  color: #52606d;
+}
+
+/* No celular, tudo vira uma coluna só (sem rolagem horizontal) */
+@media (max-width: 768px) {
+  .cards,
+  .campos {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    width: 100%;
+  }
+}
