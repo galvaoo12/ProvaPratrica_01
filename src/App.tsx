@@ -1,8 +1,7 @@
 import { useState } from "react";
 
-// ============================================
-// TYPES (exigência da prova: interfaces + type union)
-// ============================================
+
+
 
 type AnimalStatus = "disponivel" | "em_adocao" | "adotado";
 type SolicitacaoStatus = "pendente" | "aprovada" | "cancelada";
@@ -41,7 +40,7 @@ const animaisIniciais: Animal[] = [
 ];
 
 // TROQUE pelo seu código individual da prova.
-const CODIGO_PROVA = "SEU-CODIGO-AQUI";
+const CODIGO_PROVA = "PP-eLF8ROR-eY8VAAZ";
 
 // Regra do número 5: limite de solicitações ativas por interessado.
 const LIMITE_SOLICITACOES = 5;
